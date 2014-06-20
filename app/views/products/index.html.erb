@@ -1,0 +1,33 @@
+<h1>Product Listing</h1>
+
+<%= link_to 'Click here to add product', new_product_path %>
+<br/>
+<br/>
+<% @products.each do |product| %>
+  <div class="<%= cycle('first', 'second') %>">
+     <p><span class = "category">Title:</span> 
+      <%= product.title %></p>
+    <p>
+      <%= image_tag(product.image_url, class: 'image') %>
+    </p>
+ 
+        <p> <span class = "category"> Category:</span> 
+      <%=product.category.title%>  
+    
+    </p>
+    <p>
+      <span class = "category"> Description: </span>
+        <%= truncate(strip_tags(product.description), length: 80) %>
+    </p>
+
+
+    <p>
+      <%= link_to 'Show', product %><br/>
+      <%= link_to 'Edit', edit_product_path(product) %><br/>
+      <%= link_to 'Destroy', product, method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+    </p>
+  </div>
+<% end %>
+<br/>
+
