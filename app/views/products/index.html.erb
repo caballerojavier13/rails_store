@@ -1,10 +1,15 @@
-<h1>Product Listing</h1>
+<h1>Product Catalogue</h1>
+<div class="seperate">
+</br>
 
-<%= link_to 'Click here to add product', new_product_path %>
-<br/>
-<br/>
+</div>
+<div class="seperate">
+<%= link_to 'Click here to add a new product', new_product_path %>
+
+</div>
+
 <% @products.each do |product| %>
-  <div class="<%= cycle('first', 'second') %>">
+  <div class="seperate">
      <p><span class = "category">Title:</span> 
       <%= product.title %></p>
     <p>
@@ -19,12 +24,14 @@
       <span class = "category"> Description: </span>
         <%= truncate(strip_tags(product.description), length: 80) %>
     </p>
-
+<p><span class = "category">Price:</span> 
+      <%= product.price %></p>
+    <p>
 
     <p>
-      <%= link_to 'Show', product %><br/>
+      <%= link_to 'More info', product %><br/>
       <%= link_to 'Edit', edit_product_path(product) %><br/>
-      <%= link_to 'Destroy', product, method: :delete,
+      <%= link_to 'Delete', product, method: :delete,
                   data: { confirm: 'Are you sure?' } %>
     </p>
   </div>

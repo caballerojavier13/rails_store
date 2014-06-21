@@ -29,7 +29,8 @@
   </div>
   <div class="field">
     <%= f.label :category_id %><br>
-    <%= collection_select(:product, :category_id, @categories, :id, :title, {:prompt => false })  %>
+    <%= collection_select(:product, :category_id, Category.all, :id,  
+    :title, {:prompt => false })  %>
   </div>
   <div class="actions">
     <%= f.submit %>
