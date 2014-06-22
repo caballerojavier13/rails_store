@@ -7,8 +7,33 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
+	<div id="logo">
+		<%= image_tag("logo2.png") %>
+		<%=@page_title || "Search Bar goes here" %>
+	</div>
+	<div id="columns">
 
-<%= yield %>
+		<div id="side">
+			<ul>
+			<li><a href="http://www....">Home</a></li>
+			<li><a href="http://www..../faq">F.A.Q.</a></li> 
+			<li><a href="http://www..../news">Contact Us</a></li> 
+			</ul>
+		 </div>
+	<div id="row">
+				<ul>
+				<li><a href="http://www....">Category1</a></li>
+				<li><a href="http://www....">Category2</a></li>
+				<li><a href="http://www....">Category3</a></li>
+				<li><a href="http://www....">Category4</a></li>
+				<li><a href="http://www....">Category5</a></li>
+		</ul>
+	</div>
+
+		<div id="main">
+			<%= yield %>
+		</div>
+	</div>
 
 </body>
 </html>

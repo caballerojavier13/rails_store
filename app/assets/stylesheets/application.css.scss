@@ -1,0 +1,106 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+#logo {
+  border-bottom: 1px solid #f3f3f4;
+  padding-bottom: 75px;
+  padding-left: 24px;
+  
+  text-align: center;
+  font: small-caps 40px "Times";
+
+  img {
+   	float: left;
+    padding-left: 80px;
+  }
+}
+
+#notice {
+  color: #000 !important;
+  border: 2px solid red;			
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
+}
+/*	#row {
+		position: absolute;
+		bottom: 463px;
+		right: 250px;
+		 font-weight: bold;
+		 a:link{text-decoration: none;}
+		 a:hover{background-color: orange;
+		 	color:black;}
+}*/
+
+#row{
+ul {
+    float:  center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    /*list-style-type: none;*/
+}
+
+a {
+    float: left;
+    width: 14em;
+    text-decoration: none;
+    color: #3a3a3a;
+    background-color: #f3f3f4;
+    padding: 0.4em 0.6em;
+    /*border-right: 1px solid white;*/
+    font-weight: bold;
+}
+
+a:hover{
+	background-color: orange;
+		 	color:black;
+		 }
+
+li {
+    display: inline;
+}
+
+}
+  
+
+#columns {
+  background: #f3f3f4;
+
+  #main {
+    margin-left: 17em;
+    padding: 3em;
+    background: white;
+  }
+
+
+  #side {
+    float: left;
+    padding: 1em 2em;
+    width: 13em;
+    background: #f3f3f4;
+
+	
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+      }
+    }
+  }
+}
+

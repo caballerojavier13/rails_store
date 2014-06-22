@@ -1,0 +1,25 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+
+
+<h1>Featured Pieces</h1>
+
+<table>
+	<% @products.in_groups_of(2, false).each do |group| %> 
+<tr>
+	 <% group.each do |product| %>
+<td>
+<%= image_tag(product.image_url, class: 'image') %>
+<dl>
+<dt><%= product.title %></dt>
+<dd><%= number_to_currency(product.price) %></dd> </dl>
+<%end%>
+</td>
+</tr>
+<% end %>
+</table>
+
+
+
