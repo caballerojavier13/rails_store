@@ -1,9 +1,23 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @category.title %></h1>
 
-<p>
-  <strong>Title:</strong>
-  <%= @category.title %>
-</p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+
+<table>
+	<% @category.products.in_groups_of(2, false).each do |group| %> 
+<tr>
+	 <% group.each do |product| %>
+<td>
+<%= image_tag(product.image_url, class: 'image') %>
+<dl>
+<dt><%= product.title %></dt>
+<dd><%= product.description %></dd>
+
+<dd><%= number_to_currency(product.price)%>
+<%= button_to 'Add to Cart', cart_items_path(product_id: product), :class => "btn btn-primary" %>
+</dd> 
+</dl>
+<%end%>
+</td>
+</tr>
+<% end %>
+</table>

@@ -1,20 +1,20 @@
 <h1>Product Catalogue</h1>
 <div class="seperate">
-</br>
 
 </div>
 <div class="seperate">
 <%= link_to 'Click here to add a new product', new_product_path %>
 
 </div>
-
+</br>
 <% @products.each do |product| %>
   <div class="seperate">
-     <p><span class = "category">Title:</span> 
-      <%= product.title %></p>
-    <p>
+       <p>
       <%= image_tag(product.image_url, class: 'image') %>
     </p>
+     <p><span class = "category">Title:</span> 
+      <%= product.title %></p>
+  
  
         <p> <span class = "category"> Category:</span> 
       <%=product.category.title%>  
