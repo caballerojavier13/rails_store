@@ -28,10 +28,12 @@ class CartItemsController < ApplicationController
   def create
     product = Product.find(params[:product_id])
     @cart_item = @cart.add_to_cart(product.id)
+    session[:last_page]=request.env['HTTP_REFERER']
 
     respond_to do |format|
       if @cart_item.save
-        format.html { redirect_to store_url}
+        format.html { redirect_to @cart_item.cart,
+          notice: 'Item was successfully added to your cart.'}
         format.json { render action: 'show',
           status: :created, location: @cart_item }
       else

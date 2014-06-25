@@ -13,4 +13,26 @@
     font-weight: bold;
     border-top: 1px solid #db9229;
   }
+  .underline{
+       border-bottom: 1px solid;
+  }
+  .image-desc{
+    height: 80px;
+    width:  90px;
+  }
+  .spacer{
+    padding-left: 775px;
+  }
+  .space{
+    padding-left: 10px;
+  }
+  .inc-dec {
+     height: 15px;
+    width:  15px;
+  }
+  .inc{
+     list-style-type: none;
+    /* padding-left: 0;
+     padding-right: 90px;*/
+}
 }

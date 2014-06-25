@@ -38,7 +38,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Shopping Cart", cart_path(current_cart) %></li>
+        <li><%= link_to "Shopping Cart (#{current_cart.cart_items.sum('quantity')})", cart_path(current_cart) %></li>
        
           </ul>
         </li>
@@ -46,6 +46,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
 <div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
     <div class="container">
       <div class="navbar-header">
@@ -60,7 +61,7 @@
           <li><a href="http://localhost:3000/categories/1">Abstract</a></li>
           <li><a href="http://localhost:3000/categories/2">Photography</a></li>
           <li><a href="http://localhost:3000/categories/3">Decorative Art</a></li>
-          <li class="active"><a href="http://localhost:3000/categories/4"><strong>Landscape</strong></a></li>
+          <li ><a href="http://localhost:3000/categories/4">Landscape</a></li>
           <li><a href="http://localhost:3000/categories/5">Fine Art</a></li>
           <li><a href="http://localhost:3000/categories/6">Vintage</a></li>
           
