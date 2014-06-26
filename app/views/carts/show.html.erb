@@ -49,11 +49,13 @@
 	'Are you sure you want to remove all items from your cart?' }, :class => "btn btn-warning" %></td>
 	<td class="spacer"></td>
 <td><%= link_to "Continue Shopping", session[:last_page], :class => "btn btn-default" %><td>
-<td class="space"><%= button_to "Checkout", session[:last_page], :class => "btn btn-success" %><td>
+<td class="space"><%= button_to "Checkout", new_order_path, method: :get, :class => "btn btn-success" %><td>
 </tr>
 </table>
 
-
+</br>
+</br>
+</br>
 
 
 

@@ -1,0 +1,55 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, 'Name*' %><br>
+    <%= f.text_field :name, size: 40 %>
+  </div>
+  <div class="field">
+    <%= f.label :country, 'Country*' %><br>
+ <%= f.select :country, Order::COUNTRIES, prompt: 'Select your country' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :province_state, 'Province/State*' %><br>
+ <%= f.select :province_state, Order::PROVINCE_STATES, prompt: 'Select your state/province' %>
+
+  </div>
+  <div class="field">
+    <%= f.label :city, 'City*' %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :postal_code, 'Postal Code*' %><br>
+    <%= f.text_field :postal_code %>
+  </div>
+  <div class="field">
+    <%= f.label :address1, 'Address 1*' %><br>
+    <%= f.text_area :address1, cols: 40 %>
+  </div>
+  <div class="field">
+    <%= f.label :address2, 'Address 2' %><br>
+    <%= f.text_area :address2, cols: 40 %>
+  </div>
+  <div class="field">
+    <%= f.label :email, 'Email address*' %><br>
+    <%= f.email_field :email, size: 40 %>
+  </div>
+  <div class="field">
+    <%= f.label :pay_type, 'Payment type*' %><br>
+    <%= f.select :pay_type, Order::PAYMENT_TYPES, prompt: 'Select a payment method' %>
+  </div>
+  <div class="actions">
+   <%= f.submit 'Place Order' %>
+  </div>
+<% end %>

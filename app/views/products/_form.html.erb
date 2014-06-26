@@ -12,23 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :title, 'Title*' %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label :description, 'Description*' %><br>
     <%= f.text_area :description, rows: 8 %>
   </div>
   <div class="field">
-    <%= f.label :image_url %><br>
+    <%= f.label :image_url, 'Image file name* (jpeg, png, or GIF) ex: "art.png"' %><br>
     <%= f.text_field :image_url %>
   </div>
   <div class="field">
-    <%= f.label :price %><br>
+    <%= f.label :price, 'Price*' %><br>
     <%= f.text_field :price %>
   </div>
   <div class="field">
-    <%= f.label :category_id %><br>
+    <%= f.label :category_id, 'Category*' %><br>
     <%= collection_select(:product, :category_id, Category.all, :id,  
     :title, {:prompt => false })  %>
   </div>
