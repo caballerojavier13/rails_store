@@ -1,0 +1,6 @@
+	<tr>
+		<td><%= cart_item.product.title %></td>
+		<td>&times;<%= cart_item.quantity %></td>
+
+		<td><%= number_to_currency(cart_item.total_price) %></td>
+	</tr>

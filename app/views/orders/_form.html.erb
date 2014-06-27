@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+<h5>* Required field</h5>
   <div class="field">
     <%= f.label :name, 'Name*' %><br>
     <%= f.text_field :name, size: 40 %>
@@ -22,7 +23,7 @@
 
   <div class="field">
     <%= f.label :province_state, 'Province/State*' %><br>
- <%= f.select :province_state, Order::PROVINCE_STATES, prompt: 'Select your state/province' %>
+    <%= f.text_field :province_state %>
 
   </div>
   <div class="field">

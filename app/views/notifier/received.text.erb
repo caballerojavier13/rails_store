@@ -1,0 +1,15 @@
+Notifier#received
+
+Dear <%= @order.name %>,
+
+Thank you for your recent order from the Art Store. We hope that you love your newly purchased art.
+
+We are just notifying you that we have received your order for:
+<%= render @order.cart_items =%>
+
+We will send you a separate email when we ship your order.
+
+We hope you have a great day,
+
+
+The Art Store

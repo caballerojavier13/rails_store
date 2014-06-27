@@ -1,0 +1,32 @@
+<h1>The Art Store</h1>
+
+<p>
+Dear <%= @order.name %>,
+</p>
+
+<p>
+Thank you for your recent order from the Art Store. We hope that you love your newly purchased art.
+</p>
+<p>
+We are just notifying you that we have received your order for:
+</p>
+<p>
+<table>
+  <thead>
+  <tr>
+    <th>Item:</th>
+    <th>Quantity:</th>
+    <th>Price:</th>
+  </tr>
+</thead>
+<%= render @order.cart_items =%>
+</table>
+</p>
+<p>
+We will send you a separate email when we ship your order.
+</p>
+<p>
+We hope you have a great day,
+</p>
+</br>
+<p>The Art Store</p>

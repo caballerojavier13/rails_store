@@ -20,7 +20,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://localhost:3000/">The Art Store</a>
+     <%= link_to "The Art Store", store_url, :class => "navbar-brand" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -53,12 +53,12 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav nav-justified">
-          <li><a href="http://localhost:3000/categories/1">Abstract</a></li>
-          <li><a href="http://localhost:3000/categories/2">Photography</a></li>
-          <li><a href="http://localhost:3000/categories/3">Decorative Art</a></li>
-          <li ><a href="http://localhost:3000/categories/4">Landscape</a></li>
-          <li><a href="http://localhost:3000/categories/5">Fine Art</a></li>
-          <li><a href="http://localhost:3000/categories/6">Vintage</a></li>
+          <li><%= link_to "Abstract", category_path(1) %></li>
+          <li><%= link_to "Photography", category_path(2) %></li>
+          <li><%= link_to "Decorative Art", category_path(3) %></li>
+          <li ><%= link_to "Landscape", category_path(4) %></li>
+          <li><%= link_to "Fine Art", category_path(5) %></li>
+          <li><%= link_to "Vintage", category_path(6) %></li>
           
         </ul>
       </div><!--/.nav-collapse -->
