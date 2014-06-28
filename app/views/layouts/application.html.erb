@@ -32,8 +32,24 @@
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
+<% if session[:user_id] %>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administrative Tasks  <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to 'Orders', orders_path %></li>
+            <li><%= link_to 'Product Catalogue', products_path %></li>
+            <li><%= link_to 'Admin Accounts', users_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to 'Logout', logout_path, method: :delete %></li>
+          </ul>
+        </li>
+      </ul>
+<% end %>
+
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Shopping Cart (#{current_cart.cart_items.sum('quantity')})", cart_path(current_cart) %></li>
+        <li><%= link_to "Shopping Cart (#{ pluralize(current_cart.cart_items.sum('quantity'), "Item") })", cart_path(current_cart) %></li>
        
           </ul>
         </li>

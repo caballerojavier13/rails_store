@@ -16,8 +16,8 @@
       <tr>
         <td><%= order.name %></td>
         <td><%= order.email %></td>
-        <td><%= link_to 'More Info', order, :class =>"btn btn-default" %></td>
-        <td><%= link_to 'Edit Order', edit_order_path(order), :class =>"btn btn-info" %></td>
+        <td><%= link_to 'Order Details', order, :class =>"btn btn-default" %></td>
+        <td><%= link_to 'Edit Client Info', edit_order_path(order), :class =>"btn btn-default" %></td>
         <td><%= link_to 'Delete Order', order, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"btn btn-danger" %></td>
       </tr>
     <% end %>

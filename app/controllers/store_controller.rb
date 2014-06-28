@@ -1,4 +1,5 @@
 class StoreController < ApplicationController
+	skip_before_action :logged_in
   include CurrentCart
   before_action :set_cart
 

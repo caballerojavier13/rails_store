@@ -50,7 +50,8 @@
     <%= f.label :pay_type, 'Payment type*' %><br>
     <%= f.select :pay_type, Order::PAYMENT_TYPES, prompt: 'Select a payment method' %>
   </div>
+</br>
   <div class="actions">
-   <%= f.submit 'Place Order' %>
+   <%= f.submit 'Submit' %>
   </div>
 <% end %>

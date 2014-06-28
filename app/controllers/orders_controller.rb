@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  skip_before_action :logged_in, only: [:new, :create]
+
   include CurrentCart
   before_action :set_cart, only: [:new, :create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
@@ -67,6 +69,7 @@ class OrdersController < ApplicationController
   # DELETE /orders/1
   # DELETE /orders/1.json
   def destroy
+       Notifier.shipped(@order).deliver
     @order.destroy
     respond_to do |format|
       format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }

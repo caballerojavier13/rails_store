@@ -1,4 +1,7 @@
 class CartItemsController < ApplicationController
+  skip_before_action :logged_in, only: :create
+  
+
   include CurrentCart
   before_action :set_cart, only: [:create]
   before_action :set_cart_item, only: [:show, :edit, :update, :destroy]

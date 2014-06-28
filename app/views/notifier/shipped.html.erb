@@ -6,7 +6,20 @@ Dear <%= @order.name %>,
 <p>
   We are writing to let you know that we have shipped your order, and that you should be expecting it soon.
 </p>
-
+<p>
+<table>
+  <thead>
+  <tr>
+    <th>Item:</th>
+    <th>Quantity:</th>
+    <th>Price:</th>
+  </tr>
+</thead>
+<tbody>
+<%= render @order.cart_items =%>
+</tbody>
+</table>
+</p>
 
 <p>Thank you very much for your business, and we hope to see you soon.</p>
 </br>
