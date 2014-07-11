@@ -17,8 +17,8 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
-        <td><%= link_to 'Edit', edit_user_path(user), :class =>"btn btn-default" %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure you want to delete this user?' }, :class =>"btn btn-danger" %></td>
+        <td><%= link_to 'Edit', edit_user_path(user), :class =>"btn btn-default active" %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure you want to delete this user?' }, :class =>"btn btn-danger active" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path, :class =>"btn btn-info" %>
+<%= link_to 'New User', new_user_path, :class =>"btn btn-info active" %>

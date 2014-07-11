@@ -12,7 +12,7 @@
 		<th></th>
 		<th>Price:</th>
 				<th>Quantity:</th>
-		<th></th>
+		<th>Increase/Decrease</th>
 		<th class="total">Total:</th>
 	</tr>
 </thead>
@@ -27,8 +27,9 @@
 <td>&times; <%= item.quantity %>
 <td>
 <ul class="inc">
-<li><%= image_tag("up.png", class: 'inc-dec') %></li>
-<li><%= image_tag("down.png", class: 'inc-dec') %></li>
+<li class="indent2"><%= image_tag("up.png", class: 'inc-dec') %></li>
+<li class="indent2"><%= image_tag("down.png", class: 'inc-dec') %></li>
+<li class="space"><%= link_to "remove item", current_cart, :class => "btn btn-link btn-xs" %></li>
 </ul>
 </td>
 </td>
@@ -46,10 +47,10 @@
 <table>
 <tr>
 <td><%= button_to 'Empty cart', @cart, method: :delete, data: { confirm:
-	'Are you sure you want to remove all items from your cart?' }, :class => "btn btn-warning" %></td>
+	'Are you sure you want to remove all items from your cart?' }, :class => "btn btn-warning active" %></td>
 	<td class="spacer"></td>
-<td><%= link_to "Continue Shopping", session[:last_page], :class => "btn btn-default" %><td>
-<td class="space"><%= button_to "Checkout", new_order_path, method: :get, :class => "btn btn-success" %><td>
+<td><%= link_to "Continue Shopping", session[:last_page], :class => "btn btn-default active" %><td>
+<td class="space"><%= button_to "Checkout", new_order_path, method: :get, :class => "btn btn-success active" %><td>
 </tr>
 </table>
 

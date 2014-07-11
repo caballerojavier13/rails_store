@@ -21,6 +21,13 @@ validates :name, :city, :postal_code, :address1, :email, presence: true
 validates :pay_type, inclusion: PAYMENT_TYPES
 validates :country, inclusion: COUNTRIES
 
+VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
+  validates :email, allow_blank: true, format: {
+    with:    VALID_EMAIL_REGEX,
+    message: 'Please enter a valid email address'
+  }
+
 
 def get_cart_items(cart)
 	cart.cart_items.each do |item|

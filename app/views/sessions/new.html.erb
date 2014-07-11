@@ -7,16 +7,16 @@
       <h1>Enter your user name and password</h1>
   </br>	
       <div>
-        <%= label_tag :name, 'User name*:' %> </br>
+        <%= label_tag :name, 'User name:' %> </br>
         <%= text_field_tag :name, params[:name] %>
       </div>
       <div>
-        <%= label_tag :password, 'Password*:' %></br>	
+        <%= label_tag :password, 'Password:' %></br>	
         <%= password_field_tag :password, params[:password] %>
       </div>
       <div>
       </br>
-        <%= submit_tag "Login" %>
+        <%= submit_tag "Login", :class =>"btn btn-default active" %>
       </div>
   <% end %>
 

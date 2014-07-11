@@ -11,7 +11,7 @@
     <dl>
       <dt><h1><%= @product.title %></h1></dt>
       <dd><h5><%= number_to_currency(@product.price) %></h5>
-        <%= button_to 'Add to Cart', cart_items_path(product_id: @product)%>
+        <%= button_to 'Add to Cart', cart_items_path(product_id: @product), :class => "btn btn-default active" %>
       </br>
       <%= @product.description %>
     </dd>

@@ -7,7 +7,13 @@ padding-left: 10px;
     height: 200px;
     width:  250px;
   }
+  .catshow{
+  margin-left: 6px;
+  }
    h1 {
+    border-bottom: 1px solid;
+  }
+  .border{
     border-bottom: 1px solid;
   }
 
@@ -18,7 +24,7 @@ padding-left: 10px;
   .index{
   td {
 margin: 0;  
-	padding-left: 100px;
+	padding-left: 50px;
 	padding-bottom: 60px;
 	padding-top: 15px;
 }
@@ -36,4 +42,7 @@ dt{
 	font:  150% sans-serif; 
   color: #3a3a3a;
 	}
+  }
+  .indent{
+    margin-left: 13px;
   }

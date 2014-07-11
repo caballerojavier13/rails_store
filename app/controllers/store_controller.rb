@@ -4,6 +4,15 @@ class StoreController < ApplicationController
   before_action :set_cart
 
   def index
-  	@products= Product.order(:title)
+  	 if params[:search]
+      @products = Product.search(params[:search]).order(:title)
+
+      if @products.blank?
+        flash.now[:result]="Sorry, we couldn't find any results for that search."
+      end
+  else
+    @products = Product.all.order(:title)
   end
+  end
+
 end
