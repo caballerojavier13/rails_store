@@ -24,9 +24,9 @@ Rails.application.configure do
       authentication: "plain",
       user_name:      "confirmation109",
       password:       "Uottawa1",
-      # enable_starttls_auto: true
+      enable_starttls_auto: true
     } 
-
+config.action_mailer.perform_deliveries = true
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
