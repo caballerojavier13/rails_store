@@ -24,7 +24,7 @@ Rails.application.configure do
       authentication: "plain",
       user_name:      "confirmation109",
       password:       "Uottawa1",
-      enable_starttls_auto: true
+      # enable_starttls_auto: true
     } 
 
   # Print deprecation notices to the Rails logger.
