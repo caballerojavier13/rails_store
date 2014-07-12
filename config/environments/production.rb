@@ -72,7 +72,7 @@ Rails.application.configure do
       authentication: "plain",
       user_name:      "confirmation109",
       password:       "Uottawa1",
-      enable_st arttls_auto: true
+      enable_starttls_auto: true
     } 
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
