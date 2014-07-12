@@ -11,7 +11,6 @@ User.create(:name => "adnane", :password => "pass")
 User.create(:name => "ali", :password => "pass")
 
 
-Category.delete_all
 # Category.create(:title => "Abstract")
 # Category.create(:title => "Photography")
 # Category.create(:title => "Decorative Art")
