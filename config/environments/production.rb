@@ -74,7 +74,6 @@ Rails.application.configure do
       password:       "Uottawa1",
       enable_st arttls_auto: true
     } 
-    config.action_mailer.perform_deliveries = true
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
