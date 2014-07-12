@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Category.delete_all
-# Category.create(:title => "Abstract")
+Category.create(:title => "Abstract")
 # Category.create(:title => "Photography")
 # Category.create(:title => "Decorative Art")
 # Category.create(:title => "Landscape")
