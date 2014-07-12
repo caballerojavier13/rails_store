@@ -11,10 +11,10 @@ User.create(:name => "adnane", :password => "pass")
 User.create(:name => "ali", :password => "pass")
 
 
-# Category.create(:title => "Abstract")
-# Category.create(:title => "Photography")
-# Category.create(:title => "Decorative Art")
-# Category.create(:title => "Landscape")
-# Category.create(:title => "Fine Art")
-# Category.create(:title => "Vintage")
+Category.create(:title => "Abstract")
+Category.create(:title => "Photography")
+Category.create(:title => "Decorative Art")
+Category.create(:title => "Landscape")
+Category.create(:title => "Fine Art")
+Category.create(:title => "Vintage")
 
