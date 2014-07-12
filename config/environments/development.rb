@@ -18,9 +18,9 @@ Rails.application.configure do
 
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
-      address:        "smtp.yahoo.ca",
+      address:        "smtp.gmail.com",
       port:           587, 
-      domain:         "yahoo_domain",
+      domain:         "google_domain",
       authentication: "plain",
       user_name:      "confirmation109",
       password:       "Uottawa1",
