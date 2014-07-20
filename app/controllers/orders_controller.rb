@@ -8,7 +8,7 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    @orders = Order.all.page(params[:page]).per(8)
   end
 
   # GET /orders/1
@@ -41,7 +41,7 @@ class OrdersController < ApplicationController
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
 
-        # Notifier.received(@order).deliver
+        Notifier.received(@order).deliver
         format.html { redirect_to store_url, notice: 'Your order has been successfully submitted,
           thank you for your business.' }
         format.json { render :show, status: :created, location: @order }
@@ -77,6 +77,9 @@ class OrdersController < ApplicationController
     end
   end
 
+def ship
+  Notifier.shipped(@order).deliver
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -11,8 +11,7 @@
 		<th>Item:</th>
 		<th></th>
 		<th>Price:</th>
-				<th>Quantity:</th>
-		<th>Increase/Decrease</th>
+		<th class="space2">Quantity:</th>
 		<th class="total">Total:</th>
 	</tr>
 </thead>
@@ -24,21 +23,22 @@
 <td><%= number_to_currency(item.product.price) %></td>
 
 
-<td>&times; <%= item.quantity %>
+
 <td>
 <ul class="inc">
-<li class="indent2"><%= image_tag("up.png", class: 'inc-dec') %></li>
-<li class="indent2"><%= image_tag("down.png", class: 'inc-dec') %></li>
-<li class="space"><%= link_to "remove item", current_cart, :class => "btn btn-link btn-xs" %></li>
+<li class="indent2"> <input type="text" class="col-xs-2" placeholder="1"> <%= link_to "remove item", current_cart, :class => "btn btn-link btn-xs" %></li>
+<li class="space"> <%= link_to "Update Quantity", current_cart, :class => "btn btn-link btn-xs" %></li>
+
+
 </ul>
 </td>
-</td>
+
 
 <td class="price"> <%= number_to_currency(item.total_price) %></td>
 </tr>
  <% end %>
  <tr class="total">
-  <td colspan="5">Total:</td>
+  <td colspan="4">Total:</td>
   <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
 </tr>
 </table>
