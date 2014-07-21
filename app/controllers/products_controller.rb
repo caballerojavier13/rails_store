@@ -5,7 +5,11 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all.page(params[:page]).per(5)
+    @products = Product.all.page(params[:page]).per(5).search(params[:search]).order(:title)
+
+    if @products.blank?
+        flash.now[:result]="Sorry, there are no items with that name in the store."
+      end
   end
 
   # GET /products/1

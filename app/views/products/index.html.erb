@@ -8,6 +8,11 @@
 </br></br>
 </div>
 </br>
+
+<% if flash[:result] %>
+<h5><%= flash[:result] %></h5>
+<% end %>
+
 <% @products.each do |product| %>
   <div class="seperate">
        <p>
