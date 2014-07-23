@@ -24,4 +24,4 @@ Website administrators are able:
 
 - Create new administrator accounts.
 
-As mentioned earlier, this project was taken on to learn more about Ruby on Rails, I plan to update it with features, or improvements as my school schedule will permit. 
+As mentioned earlier, this project was taken on to learn more about Ruby on Rails, I plan to update it with features, or improvements as much my school schedule will permit. 
