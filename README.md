@@ -4,7 +4,7 @@ The application can be run by pointing your termninal to the directory of the ap
 
 The application was developed with Ruby 2.0.0p451, and Rails 4.1.1.
 
-In this application users are able:
+In this application users are able to:
 
 - Browse and shop for paintings. There is a subset of the product catalogue displayed on the main page, and users are able to browse using product categories, or by using the search bar.
 
@@ -14,9 +14,9 @@ In this application users are able:
 
 - There is an implemented mailer that sends a notification email to the customer after the transaction is complete, and displays the products they purchased. This would also serve as their receipt.
 
-Website administrators are able:
+Website administrators are able to:
 
-- Log in to manage the website. Website designed so that it could be managed by a non technical individual. In the login page, the 'forgot password' and 'remember me' functions are still being developed. 
+- Log in to manage the website. Website is designed so that it could be managed by a non technical individual. In the login page, the 'forgot password' and 'remember me' functions are still being developed. 
 
 - Navigate to orders section where they can view the orders that were submitted, edit customer info, notify customers by email that their order was shipped, and delete orders. The notification of shipment feature is still under development.
 
