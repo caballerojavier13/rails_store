@@ -1,4 +1,4 @@
-This is an e-commerce application that was designed to learn Ruby on Rails.
+This is an e-commerce application that was designed with the objective of learning Ruby on Rails.
 
 The application can be run by pointing your termninal to the directory of the application, and running the command 'rails s'.
 
@@ -24,4 +24,4 @@ Website administrators are able to:
 
 - Create new administrator accounts.
 
-As mentioned earlier, this project was taken on to learn more about Ruby on Rails, I plan to update it with features, or improvements as much my school schedule will permit. 
+As mentioned earlier, this project was taken on to learn more about Ruby on Rails, I plan to update it with features, and improvements as much my school schedule will allow. 
