@@ -1,4 +1,4 @@
-class CategoriesController < ApplicationController
+wclass CategoriesController < ApplicationController
    skip_before_action :logged_in, only: :show
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
