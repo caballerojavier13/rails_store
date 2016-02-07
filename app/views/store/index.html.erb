@@ -1,13 +1,12 @@
-<h1>Featured Pieces</h1>
-
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
 
+<% if params[:search] %>
+<h1>Search results</h1>
 <% if flash[:result] %>
 <h5><%= flash[:result] %></h5>
 <% end %>
-
 
 <table>
 	<% @products.take(6).in_groups_of(3, false).each do |group| %> 
@@ -28,8 +27,28 @@
 </tr>
 <% end %>
 </table>
-</br>
-</br>
 
+<% else %>
 
+<h1>Featured Pieces</h1>
+<table>
+	<% @products.take(6).in_groups_of(3, false).each do |group| %> 
+<tr>
+	 <% group.each do |product| %>
+<td class='entry'>
+<%= link_to image_tag(product.image_url, class: 'image img-thumbnail'), product_path(product)%>
+<dl>
+<dt><%= product.title %></dt>
+<dd class="bold"><%= number_to_currency(product.price)%>
+</br></br>
+<%= link_to 'More Info', product_path(product), :class => "btn btn-default active" %>
+</br></br>
+<%= button_to 'Add to Cart', cart_items_path(product_id: product), :class => "btn btn-primary active" %>
+</dd> </dl>
+<%end%>
+</td>
+</tr>
+<% end %>
+</table>
 
+<% end %>
