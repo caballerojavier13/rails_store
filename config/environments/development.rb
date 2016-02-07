@@ -23,7 +23,7 @@ Rails.application.configure do
       domain:         "google_domain",
       authentication: "plain",
       user_name:      "confirmation109",
-      password:       "Uottawa1",
+      password:       "yourPassword",
       enable_starttls_auto: true
     } 
 
