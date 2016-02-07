@@ -1,5 +1,5 @@
 class CartItemsController < ApplicationController
-  skip_before_action :logged_in, only: [:create, :show]
+  skip_before_action :logged_in, only: [:create, :show, :update, :destroy]
   
 
   include CurrentCart
@@ -52,10 +52,10 @@ class CartItemsController < ApplicationController
   def update
     respond_to do |format|
       if @cart_item.update(cart_item_params)
-        format.html { redirect_to @cart_item, notice: 'Cart item was successfully updated.' }
+        format.html { redirect_to :back, notice: 'Cart item was successfully updated.' }
         format.json { render :show, status: :ok, location: @cart_item }
       else
-        format.html { render :edit }
+        format.html { redirect_to :back, notice: 'Please enter a valid quantity' }
         format.json { render json: @cart_item.errors, status: :unprocessable_entity }
       end
     end
@@ -68,7 +68,7 @@ class CartItemsController < ApplicationController
      @cart_item = CartItem.find(params[:id])
     @cart_item.destroy
     respond_to do |format|
-      format.html { redirect_to cart_items_url, notice: 'Cart item was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Cart item was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -81,6 +81,6 @@ class CartItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cart_item_params
-      params.require(:cart_item).permit(:product_id, :cart_id)
+      params.require(:cart_item).permit(:product_id, :cart_id, :quantity)
     end
 end
