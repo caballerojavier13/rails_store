@@ -16,6 +16,12 @@ Rails.application.routes.draw do
 
   resources :orders
 
+ resources :orders do
+  member do
+    get 'shipped'
+  end
+end
+
   resources :cart_items
 
   resources :carts
@@ -26,7 +32,6 @@ Rails.application.routes.draw do
 
   resources :products
 
-  match "/ship", to: "order#ship", via: "get"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

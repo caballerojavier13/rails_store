@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
 
   include CurrentCart
   before_action :set_cart, only: [:new, :create]
-  before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :set_order, only: [:show, :edit, :update, :destroy, :shipped]
 
   # GET /orders
   # GET /orders.json
@@ -52,6 +52,11 @@ class OrdersController < ApplicationController
     end
   end
 
+  def shipped
+    Notifier.shipped(@order).deliver
+    redirect_to :back
+  end
+
   # PATCH/PUT /orders/1
   # PATCH/PUT /orders/1.json
   def update
@@ -77,9 +82,6 @@ class OrdersController < ApplicationController
     end
   end
 
-def ship
-  Notifier.shipped(@order).deliver
-end
 
   private
     # Use callbacks to share common setup or constraints between actions.

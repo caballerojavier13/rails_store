@@ -18,7 +18,7 @@
         <td><%= order.email %></td>
         <td><%= link_to 'Order Details', order, :class =>"btn btn-default active" %></td>
         <td><%= link_to 'Edit Client Info', edit_order_path(order), :class =>"btn btn-default active" %></td>
-          <td><%= link_to 'Notification of Shipment', orders_path,
+          <td><%= link_to 'Notification of Shipment', shipped_order_path(order),
           #ship_path(order),
            data: { confirm: 'Are you sure the order has been shipped?' }, :class =>"btn btn-default active " %></td>
         <td><%= link_to 'Delete Order', order, method: :delete, data: { confirm: 'Are you sure you want to delete this order?' }, :class =>"btn btn-danger active" %></td>
