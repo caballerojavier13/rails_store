@@ -2,6 +2,7 @@ ruby "2.2.4"
 
 source 'https://rubygems.org'
 
+gem 'rake', '11.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails','4.2.2'
@@ -36,7 +37,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'kaminari'
 
 group :production do
-  gem 'pg', '0.17.1'
+ # gem 'pg', '0.17.1'
   gem 'rails_12factor', '0.0.2'
 end
 # Use unicorn as the app server
